@@ -1,0 +1,83 @@
+/*--------------------------------------------------------------------------------------------------
+
+	MISSION DESCRIPTION
+
+--------------------------------------------------------------------------------------------------*/
+author = "Kex";
+onLoadName = "Support 6+1 Achilles Altis";
+briefingName = "Support 6+1 Achilles Altis";
+debriefing = 0;
+onLoadMission = "The 111th Division launches their attack against CSAT occupation forces";
+overviewText = "The 111th Division launches their attack against CSAT occupation forces";
+overviewPicture = "\a3\data_F_heli\Images\heli_popupImage_02_ca.paa";
+
+/*--------------------------------------------------------------------------------------------------
+
+	MP HEADER
+
+--------------------------------------------------------------------------------------------------*/
+class Header
+{
+	gameType = Support;
+	minPlayers = 1;
+	maxPlayers = 7;
+};
+
+/*--------------------------------------------------------------------------------------------------
+
+	SERVER PARAMS
+
+--------------------------------------------------------------------------------------------------*/
+class Params
+{
+	#define DAYTIMEHOUR_DEFAULT		6
+
+	#define DEBUGCONSOLE_DEFAULT	1
+
+	#define TICKETS_MIN				100
+	#define TICKETS_MAX				600
+	#define TICKETS_DEFAULT			300
+
+	#define WEATHER_DEFAULT			25
+
+	#define VIEW_DISTANCE_MIN		1500
+	#define VIEW_DISTANCE_MAX		4000
+	#define VIEW_DISTANCE_DEFAULT	2000
+	
+	#define DEFAULT_LOCATION		0
+	#define HC_IS_CURATOR			1
+	
+	#include "customMissionParams.hpp"
+	#include "\a3\functions_f\Params\paramWeather.inc"
+	#include "\a3\functions_f\Params\paramRespawnTicketsNoDisabled.inc"
+	#include "\a3\functions_f\Params\paramDebugConsole.inc"
+	#include "\a3\functions_f\Params\paramDaytimeHour.inc"
+	#include "\a3\Functions_F_Heli\Params\paramViewDistance.inc"
+};
+
+/*--------------------------------------------------------------------------------------------------
+
+	RESPAWN
+
+--------------------------------------------------------------------------------------------------*/
+respawn = 2;
+respawnDelay = 6;
+respawnVehicleDelay = 0;
+respawnTemplates[] = {"MenuPosition","Tickets"};
+respawnOnStart = 0;
+disabledAI = 1;
+respawnDialog = 0;
+
+/*--------------------------------------------------------------------------------------------------
+
+	CUSTOM GROUPS
+
+--------------------------------------------------------------------------------------------------*/
+#include "cfgGroups.hpp"
+
+/*--------------------------------------------------------------------------------------------------
+
+	FUNCTIONS
+
+--------------------------------------------------------------------------------------------------*/
+#include "cfgFunctions.hpp"
