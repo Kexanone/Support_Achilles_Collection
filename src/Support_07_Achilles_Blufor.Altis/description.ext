@@ -47,7 +47,7 @@ class Params
 	#define DEFAULT_LOCATION		0
 	#define HC_IS_CURATOR			1
 	
-	#include "customMissionParams.hpp"
+	#include "custom\missionParams.hpp"
 	#include "\a3\functions_f\Params\paramWeather.inc"
 	#include "\a3\functions_f\Params\paramRespawnTicketsNoDisabled.inc"
 	#include "\a3\functions_f\Params\paramDebugConsole.inc"
@@ -73,7 +73,7 @@ respawnDialog = 0;
 	CUSTOM GROUPS
 
 --------------------------------------------------------------------------------------------------*/
-#include "cfgGroups.hpp"
+#include "custom\cfgGroups.hpp"
 
 /*--------------------------------------------------------------------------------------------------
 

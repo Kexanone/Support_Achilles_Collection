@@ -17,5 +17,6 @@ class CfgFunctions
 			};
 		};
 		#include "carrier\cfgFunctions.hpp"
+		#include "common\cfgFunctions.hpp"
 	};
 };

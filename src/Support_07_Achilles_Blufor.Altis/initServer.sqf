@@ -1,5 +1,27 @@
 /*--------------------------------------------------------------------------------------------------
 
+	RELOCATE THE CARRIER
+
+--------------------------------------------------------------------------------------------------*/
+
+/*
+if (isServer) then
+{
+	private _carrierPosition = call Mission_fnc_carrier_getPos;
+	if (this distance _carrierPosition > 1000) then
+	{
+		private _carrierPosDiff =  _carrierPosition vectorDiff getPosWorld this;
+		{
+			_x setPosWorld (_carrierPosDiff vectorAdd getPosWorld _x);
+		} forEach (nearestObjects [getPos this, [], 300]);
+		[this] call BIS_fnc_Carrier01PosUpdate;
+	};
+};
+*/
+
+
+/*--------------------------------------------------------------------------------------------------
+
 	INIT PLANE & EVAC SKIN CLEAN-UP
 
 --------------------------------------------------------------------------------------------------*/
@@ -26,4 +48,6 @@
 
 --------------------------------------------------------------------------------------------------*/
 
-[independent, west call BIS_fnc_respawnTickets] call BIS_fnc_respawnTickets;
+[east, west call BIS_fnc_respawnTickets] call BIS_fnc_respawnTickets;
+
+diag_log "tfadfadf";
